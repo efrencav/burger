@@ -1,0 +1,54 @@
+<div class="container-fluid col-10">
+  <div class="row">
+    <div class="col">
+    </div>
+    {{!-- Header --}}
+    <div class="col">
+      <h1  class="text-white">Eat-the-Burger!</h1>
+      <img id="bacon-burger" class="mb-4 img-responsive" src="./assets/img/bacon-burger.png">
+    </div>
+    <div class="col">
+    </div>
+  </div>
+  {{!-- On the Menu --}}
+    <div class="row mb-4">
+      <div class="col-6 bg-extra-dark-gray padding-20px-top">
+        <h2 class="text-white">On the Menu!</h2>
+          <ul>
+            {{#each burgers}}
+              {{#unless devoured}}
+              <li>
+                {{burger_name}}<button class="devour" data-id="{{id}}">Devour Burger!</button>
+              </li>
+              {{/unless}}
+            {{/each}}
+          </ul>
+      </div>
+      {{!-- Devoured burger --}}
+      <div class="col-6 bg-extra-dark-gray padding-20px-top">
+        <h2 class="text-white">Devoured Burgers!</h2>
+          <ul>
+            {{#each burgers}}
+              {{#if devoured}}
+              <li>
+                {{burger_name}}
+              </li>
+              {{/if}}
+            {{/each}}
+          </ul>
+        </div>
+    </div>
+    {{!-- add a burger section --}}
+    <div class="col bg-medium-gray">
+      <h3 class="text-white">Add a Burger</h3>
+      <form class="create-form">
+        <div class="row">
+          <div class="form-group">
+            <label for="burg">Burger: </label>
+            <input type="text" id="burg" name="name">
+          </div>
+          <button type="submit" class="btn btn-sucess">Add Burger</button>
+        </div>
+      </form>
+    </div>
+</div>
