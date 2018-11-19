@@ -12,7 +12,7 @@
   </div>
   {{!-- On the Menu --}}
     <div class="row mb-4">
-      <div class="col-6 bg-extra-dark-gray padding-20px-top">
+      <div class="col-6 bg-orange-opacity padding-20px-top">
         <h2 class="text-white">On the Menu!</h2>
           <ul>
             {{#each burgers}}
@@ -25,7 +25,7 @@
           </ul>
       </div>
       {{!-- Devoured burger --}}
-      <div class="col-6 bg-extra-dark-gray padding-20px-top">
+      <div class="col-6 bg-orange-opacity padding-20px-top">
         <h2 class="text-white">Devoured Burgers!</h2>
           <ul>
             {{#each burgers}}
@@ -39,15 +39,15 @@
         </div>
     </div>
     {{!-- add a burger section --}}
-    <div class="col bg-medium-gray">
-      <h3 class="text-white">Add a Burger</h3>
+    <div class="col bg-white">
+      <h3 >Add a Burger</h3>
       <form class="create-form">
         <div class="row">
-          <div class="form-group">
+          <div class="form-group centered">
             <label for="burg">Burger: </label>
-            <input type="text" id="burg" name="name">
+            <input class="extra-big-input" type="text" id="burg" name="name">
           </div>
-          <button type="submit" class="btn btn-sucess">Add Burger</button>
+          <button type="submit" class="btn btn-large btn-black ">Add Burger</button>
         </div>
       </form>
     </div>
