@@ -17,9 +17,7 @@
           <ul>
             {{#each burgers}}
               {{#unless devoured}}
-              <li>
-                {{burger_name}}<button class="devour" data-id="{{id}}">Devour Burger!</button>
-              </li>
+              {{burgers/burger-block devoured=true}}
               {{/unless}}
             {{/each}}
           </ul>
@@ -30,9 +28,7 @@
           <ul>
             {{#each burgers}}
               {{#if devoured}}
-              <li>
-                {{burger_name}}
-              </li>
+              {{burgers/burger-block devoured=false}}
               {{/if}}
             {{/each}}
           </ul>
@@ -45,7 +41,7 @@
         <div class="row">
           <div class="form-group centered">
             <label for="burg">Burger: </label>
-            <input class="extra-big-input" type="text" id="burg" name="name">
+            <input class="extra-big-input" type="text" id="burg" name="burger_name" placeholder="Uber Delicious Burger">
           </div>
           <button type="submit" class="btn btn-large btn-black ">Add Burger</button>
         </div>
