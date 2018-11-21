@@ -408,7 +408,7 @@ h6 {font-size:25px; line-height:30px}
 .btn.btn-rounded.btn-extra-large {padding: 12px 45px 13px;}
 
 /* input */
-.input-border-bottom {background: transparent; border: 0; border-bottom: 1px solid #484848; padding: 10px 0; margin-bottom: 30px; font-size: 14px;}
+.input-border-bottom {background: transparent; border: 0; border-bottom: 1px solid #484848; padding: 10px 0; margin-bottom: 30px; font-size: 14px; width: 100%;}
 .input-border-bottom:focus{background: transparent; border: 0; border-bottom: 1px solid #929292; }
 .input-border-bottom::-webkit-input-placeholder {font-weight: 300; font-size: 14px; }
 .input-border-bottom::-moz-placeholder {font-weight: 300; font-size: 14px;} 

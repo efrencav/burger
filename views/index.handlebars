@@ -5,7 +5,7 @@
     {{!-- Header --}}
     <div class="centered">
       <div class="container ">
-        <h1 class="display-4 centered padding-20px-top">Eat-tha-Burger!</h1>
+        <h1 class="centered padding-20px-top">Eat-tha-Burger!</h1>
       <img id="bacon-burger" class="mb-4 img-responsive centered" src="./assets/img/bacon-burger.png">
       </div>
     </div>
@@ -13,8 +13,21 @@
     <div class="col">
     </div>
   </div>
+  {{!-- add a burger section --}}
+  <div class="col-md-12 bg-white">
+    <form class="create-form">
+      <div class="row">
+        <div class="form-group centered">
+          {{!-- <label for="burg">Burger: </label> --}}
+          <h4 for="text centered">Add a Burger</h4>
+          <input class="input input-border-bottom big-input" type="text" id="burg" name="burger_name" placeholder="Uber Delicious Burger">
+        </div>
+      </div>
+              <button type="submit" class="addBurgerButton btn-extra-large btn btn-rounded btn-black centered">Add The Burger</button>
+    </form>
+  </div>
   {{!-- On the Menu --}}
-  <div class="row mb-4 justify-content-center">
+  <div class="row mb-4 justify-content-center margin-40px-top">
     <div class="col-md-5 bg-light-gray border padding-20px-top">
       <h4 class="text-black padding-20px-bottom">On the Menu!</h2>
       <ul class="text-black">
@@ -42,18 +55,5 @@
       </ul>
     </div>
   </div>
-  {{!-- add a burger section --}}
-  <div class="col bg-white">
-    <form class="create-form">
-      <div class="row">
-        <div class="form-group centered">
-          {{!-- <label for="burg">Burger: </label> --}}
-          <label for="text">Add a Burger</label>
-          <input class="input" type="text" id="burg" name="burger_name" placeholder="Uber Delicious Burger">
-
-        </div>
-        <button type="submit" class="addBurgerButton">Add The Burger</button>
-      </div>
-    </form>
-  </div>
+  
 </div>
