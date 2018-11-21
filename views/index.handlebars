@@ -3,53 +3,57 @@
     <div class="col">
     </div>
     {{!-- Header --}}
-    <div class="col">
-      <h1  class="text-white">Eat-tha-Burger!</h1>
-      <img id="bacon-burger" class="mb-4 img-responsive" src="./assets/img/bacon-burger.png">
+    <div class="centered">
+      <div class="container ">
+        <h1 class="display-4 centered padding-20px-top">Eat-tha-Burger!</h1>
+      <img id="bacon-burger" class="mb-4 img-responsive centered" src="./assets/img/bacon-burger.png">
+      </div>
     </div>
+    
     <div class="col">
     </div>
   </div>
   {{!-- On the Menu --}}
-    <div class="row mb-4">
-      <div class="col-6 bg-orange-opacity padding-20px-top">
-        <h2 class="text-white">On the Menu!</h2>
-          <ul>
-            {{#each burger}}
-              {{#unless this.devoured}}
-              <p>{{this.burger_name}}
-                <button type="button" class="btn btn-danger change-burger" data-burgerid="{{this.id}}">Devour</button>
-              </p>
-              {{/unless}}
-            {{/each}}
-          </ul>
+  <div class="row mb-4 justify-content-center">
+    <div class="col-md-5 bg-light-gray border padding-20px-top">
+      <h4 class="text-black padding-20px-bottom">On the Menu!</h2>
+      <ul class="text-black">
+        {{#each burger}}
+        {{#unless this.devoured}}
+        <p class="padding-20px-right">{{this.burger_name}}
+          <button type="button" class="btn btn-danger change-burger margin-20px-left" data-burgerid="{{this.id}}">Devour</button>
+            <hr class="bg-medium-gray">
+        </p>
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    {{!-- Devoured burger --}}
+    <div class="col-md-5 bg-light-gray border padding-20px-top">
+      <h4 class="text-black padding-20px-bottom">Devoured Burgers!</h2>
+      <ul>
+        {{#each burger}}
+        {{#if this.devoured}}
+        <p>{{this.id}}. {{this.burger_name}} - DEVOURED
+            <hr class="bg-medium-gray">
+        </p>
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  {{!-- add a burger section --}}
+  <div class="col bg-white">
+    <form class="create-form">
+      <div class="row">
+        <div class="form-group centered">
+          {{!-- <label for="burg">Burger: </label> --}}
+          <label for="text">Add a Burger</label>
+          <input class="input" type="text" id="burg" name="burger_name" placeholder="Uber Delicious Burger">
+
+        </div>
+        <button type="submit" class="addBurgerButton">Add The Burger</button>
       </div>
-      {{!-- Devoured burger --}}
-      <div class="col-6 bg-orange-opacity padding-20px-top">
-        <h2 class="text-white">Devoured Burgers!</h2>
-          <ul>
-            {{#each burger}}
-              {{#if this.devoured}}
-              <p>{{this.id}}. {{this.burger_name}} - DEVOURED
-              </p>
-              {{/if}}
-            {{/each}}
-          </ul>
-        </div>
-    </div>
-    {{!-- add a burger section --}}
-    <div class="col bg-white">
-      <form class="create-form">
-        <div class="row">
-          <div class="form-group centered">
-            {{!-- <label for="burg">Burger: </label> --}}
-            <label for="text">Add a Burger</label>
-            <input class="input" type="text" id="burg" name="burger_name" placeholder="Uber Delicious Burger">
-            
-          </div>
-        </div>
-      </form>
-    </div>
+    </form>
+  </div>
 </div>
-
-

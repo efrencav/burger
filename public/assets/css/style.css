@@ -485,3 +485,15 @@ li {
 #bacon-burger{
   margin: 0 auto;
 }
+
+.jumbotron {
+  width: 80% !important;
+  margin-left: auto; 
+    margin-right: auto;
+}
+
+.border {
+  border: 1px solid;
+    padding: 20px;
+    margin: 0 10px 0 0;
+}
