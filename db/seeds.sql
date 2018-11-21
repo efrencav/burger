@@ -1,6 +1,7 @@
-INSERT INTO cats (name) VALUES ('Meeses');
-INSERT INTO cats (name) VALUES ('Bobbi');
-INSERT INTO cats (name, sleepy) VALUES ('Sylvester', true);
-INSERT INTO cats (name, sleepy) VALUES ('Marilyn Manson', true);
-INSERT INTO cats (name, sleepy) VALUES ('Joe Biden', true);
-INSERT INTO cats (name) VALUES ('Owens');
+-- Creating seed data for the burgers_db database --
+INSERT INTO burgers (burger_name, devoured) VALUES ('Double Bacon Cheeseburger', false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Triple-Stacked Avocado Burger', false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Cali-Chicken Cheeseburger', false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Southern Style Veggie Burger', true);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Spicy Pepper Jack Mushroom Burger', true);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Tequila Lime Burger', true);

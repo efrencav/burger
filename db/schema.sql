@@ -1,12 +1,12 @@
-### Schema
+-- Create the burgers_db database --
+CREATE DATABASE burgers_db;
+USE burgers_db;
 
-CREATE DATABASE cat_db;
-USE cat_db;
-
-CREATE TABLE cats
+-- Create a burgers table with the required fields --
+CREATE TABLE burgers
 (
 	id int NOT NULL AUTO_INCREMENT,
-	name varchar(255) NOT NULL,
-	sleepy BOOLEAN DEFAULT false,
-	PRIMARY KEY (id)
+	burger_name varchar(255) NOT NULL,
+	devoured BOOLEAN DEFAULT false,
+	  	PRIMARY KEY(id)
 );
