@@ -15,10 +15,10 @@
       <div class="col-6 bg-orange-opacity padding-20px-top">
         <h2 class="text-white">On the Menu!</h2>
           <ul>
-            {{#each burgers}}
+            {{#each burger}}
               {{#unless this.devoured}}
               <p>{{this.burger_name}}
-                <button type="button" class="btn btn-danger" data-burgerid="{{this.id}}">Devour</button>
+                <button type="button" class="btn btn-danger change-burger" data-burgerid="{{this.id}}">Devour</button>
               </p>
               {{/unless}}
             {{/each}}
@@ -28,7 +28,7 @@
       <div class="col-6 bg-orange-opacity padding-20px-top">
         <h2 class="text-white">Devoured Burgers!</h2>
           <ul>
-            {{#each burgers}}
+            {{#each burger}}
               {{#if this.devoured}}
               <p>{{this.id}}. {{this.burger_name}} - DEVOURED
               </p>
