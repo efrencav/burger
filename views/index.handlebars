@@ -16,8 +16,10 @@
         <h2 class="text-white">On the Menu!</h2>
           <ul>
             {{#each burgers}}
-              {{#unless devoured}}
-              {{burgers/burger-block devoured=true}}
+              {{#unless this.devoured}}
+              <p>{{this.burger_name}}
+                <button type="button" class="btn btn-danger" data-burgerid="{{this.id}}">Devour</button>
+              </p>
               {{/unless}}
             {{/each}}
           </ul>
@@ -27,8 +29,9 @@
         <h2 class="text-white">Devoured Burgers!</h2>
           <ul>
             {{#each burgers}}
-              {{#if devoured}}
-              {{burgers/burger-block devoured=false}}
+              {{#if this.devoured}}
+              <p>{{this.id}}. {{this.burger_name}} - DEVOURED
+              </p>
               {{/if}}
             {{/each}}
           </ul>
@@ -36,15 +39,18 @@
     </div>
     {{!-- add a burger section --}}
     <div class="col bg-white">
-      <h3 >Add a Burger</h3>
       <form class="create-form">
         <div class="row">
           <div class="form-group centered">
-            <label for="burg">Burger: </label>
-            <input class="extra-big-input" type="text" id="burg" name="burger_name" placeholder="Uber Delicious Burger">
+            {{!-- <label for="burg">Burger: </label> --}}
+            <label for="text">Add a Burger</label>
+            <input class="input" type="text" id="burg" name="burger_name" placeholder="Uber Delicious Burger">
+                      <button type="submit" class="btn btn-black ">Add Burger</button>
+
           </div>
-          <button type="submit" class="btn btn-large btn-black ">Add Burger</button>
         </div>
       </form>
     </div>
 </div>
+
+
